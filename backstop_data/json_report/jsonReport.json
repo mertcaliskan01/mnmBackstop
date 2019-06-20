@@ -1,0 +1,21 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../html_report/ReferenceDesktop/Test_Dashboard_Page_0_document_0_Desktop.png",
+        "test": "../html_report/TestDesktop/20190517-211617/Test_Dashboard_Page_0_document_0_Desktop.png",
+        "selector": "document",
+        "fileName": "Test_Dashboard_Page_0_document_0_Desktop.png",
+        "label": "Dashboard Page",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0,
+        "url": "https://dev-new.mynextmatch.com/Event/EventManage/Dashboard/29",
+        "expect": 0,
+        "viewportLabel": "Desktop",
+        "error": "Reference file not found /home/mert/Desktop/deneme/MNM_Node_Test/backstop_data/html_report/ReferenceDesktop/Test_Dashboard_Page_0_document_0_Desktop.png"
+      },
+      "status": "fail"
+    }
+  ]
+}

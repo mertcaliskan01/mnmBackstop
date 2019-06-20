@@ -1,0 +1,16 @@
+{
+  "name": "mnm",
+  "version": "1.0.0",
+  "description": "Test",
+  "main": "app",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Mert",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "thread-sleep": "^2.2.0"
+  }
+}

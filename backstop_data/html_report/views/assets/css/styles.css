@@ -1,0 +1,42 @@
+.btn.btn-primary {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
+input[type=text] {
+  width: 150px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+
+}
+
+input[type=text]:focus {
+  width: 50%;
+  border: 1px solid rgb(45, 77, 119);
+
+}
+
+.search{
+  outline: none;
+  color: rgb(255,255,255);
+  position: absolute;
+  right: 0px;
+  border-radius: 17px;
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+
+background: -webkit-gradient( linear, left bottom, left top, color-stop(0, rgb(45, 77, 119)), color-stop(1, rgb(230,230,230)));
+border: 0;
+border-bottom: 1px solid rgb(45, 77, 119);
+border-right: 1px solid rgb(45, 77, 119);
+font-size: 16px;
+margin: 4px;
+padding: 5px;
+width: 250px;
+
+}
+::placeholder {
+  color: rgb(236, 227, 227);
+  opacity: 1; 
+}

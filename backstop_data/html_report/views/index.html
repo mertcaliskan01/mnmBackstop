@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MNM</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body style="background-color: rgb(45, 77, 119);">
+    <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link" href="#"
+                style="color: rgb(255,255,255);font-size: 22px;filter: blur(0px) brightness(200%) contrast(74%) grayscale(0%);background-color: #8ca2ab;opacity: 0.78;filter: blur(0px) brightness(96%) hue-rotate(0deg) sepia(0%);">TEST
+                PAGE</a></li>
+        <div>
+            <input class="search" type="text" id="myInput" onkeyup="searchFunction()" name="search"
+                placeholder=" Search..">
+
+        </div>
+
+
+    </ul>
+    <div class="table-responsive"
+        style="background-color: #8ca2ab;opacity: 0.78;filter: blur(0px) brightness(96%) hue-rotate(0deg) sepia(0%);">
+        <table class="table">
+            <thead>
+                <tr style="width:100%">
+                    <th data-mnm-selector="test-names" style="width:30%">TEST NAMES</th>
+                    <th data-mnm-selector="click-to-start" style="width:30%; text-align: center">START</th>
+                    <th data-mnm-selector="status" style="width:20%; text-align: center">STATUS</th>
+                    <th data-mnm-selector="report" style="width:20%; text-align: center">REPORT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="section1" id='section1' data-mnm-selector="section1">
+                    <td class="Awards" id='Awards' name='Awards' data-mnm-selector="Awards"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Awards</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn1'
+                            id='btn1' data-mnm-selector="btn1"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn1") ;  readfile("btn1","status1","report1","reportlink1","Event-Manage-Awards","Award")'
+                            type="button">Start</button></td>
+                    <td><img name='status1' id='status1' data-mnm-selector="status1"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink1' id='reportlink1' data-mnm-selector="reportlink1" href="/Award"
+                            target="_blank">
+                            <img name='report1' id='report1' data-mnm-selector="report1"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section2" id='section2' data-mnm-selector="section2">
+                    <td class="Bracket" id='Bracket' name='Bracket' data-mnm-selector="Bracket"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Bracket</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn2'
+                            id='btn2' data-mnm-selector="btn2"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn2") ;  readfile("btn2","status2","report2","reportlink2","Event-Manage-Bracket","Bracket")'
+                            type="button">Start</button></td>
+                    <td><img name='status2' id='status2' data-mnm-selector="status2"
+                            style=" display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink2' id='reportlink2' data-mnm-selector="reportlink2" href="/Bracket"
+                            target="_blank">
+                            <img name='report2' id='report2' data-mnm-selector="report2"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section3" id='section3' data-mnm-selector="section3">
+                    <td class="Dashboard" id='Dashboard' name='Dashboard' data-mnm-selector="Dashboard"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Dashboard</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn3'
+                            id='btn3' data-mnm-selector="btn3"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn3") ;  readfile("btn3","status3","report3","reportlink3","Event-Manage-Dashboard","Dashboard")'
+                            type="button">Start</button></td>
+                    <td><img name='status3' id='status3' data-mnm-selector="status3"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink3' id='reportlink3' data-mnm-selector="reportlink3" href="/Dashboard"
+                            target="_blank">
+                            <img name='report3' id='report3' data-mnm-selector="report3"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section4" id='section4' data-mnm-selector="section4">
+                    <td class="Design" id='Design' name='Design' data-mnm-selector="Design"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Design</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn4'
+                            id='btn4' data-mnm-selector="btn4"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn4") ;  readfile("btn4","status4","report4","reportlink4","Event-Manage-Design","Design")'
+                            type="button">Start</button></td>
+                    <td><img name='status4' id='status4' data-mnm-selector="status4"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink4' id='reportlink4' data-mnm-selector="reportlink4" href="/Design"
+                            target="_blank">
+                            <img name='report4' id='report4' data-mnm-selector="report4"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section5" id='section5' data-mnm-selector="section5">
+                    <td class="EventProfile" id='EventProfile' name='EventProfile' data-mnm-selector="EventProfile"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Event Profile</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn5'
+                            id='btn5' data-mnm-selector="btn5"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn5") ;  readfile("btn5","status5","report5","reportlink5","Event-Manage-Event-Profile","EventProfile")'
+                            type="button">Start</button></td>
+                    <td><img name='status5' id='status5' data-mnm-selector="status5"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink5' id='reportlink5' data-mnm-selector="reportlink5" href="/EventProfile"
+                            target="_blank">
+                            <img name='report5' id='report5' data-mnm-selector="report5"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section6" id='section6' data-mnm-selector="section6">
+                    <td class="MatchResult" id='MatchResult' name='MatchResult' data-mnm-selector="MatchResult"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Match Result</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn6'
+                            id='btn6' data-mnm-selector="btn6"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn6") ;  readfile("btn6","status6","report6","reportlink6","Event-Manage-Match-Result","MatchResult")'
+                            type="button">Start</button></td>
+                    <td><img name='status6' id='status6' data-mnm-selector="status6"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink6' id='reportlink6' data-mnm-selector="reportlink6" href="/MatchResult"
+                            target="_blank">
+                            <img name='report6' id='report6' data-mnm-selector="report6"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section7" id='section7' data-mnm-selector="section7">
+                    <td class="Participants" id='Participants' name='Participants' data-mnm-selector="Participants"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Participants</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn7'
+                            id='btn7' data-mnm-selector="btn7"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn7") ;  readfile("btn7","status7","report7","reportlink7","Event-Manage-Participants","Participants")'
+                            type="button">Start</button></td>
+                    <td><img name='status7' id='status7' data-mnm-selector="status7"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink7' id='reportlink7' data-mnm-selector="reportlink7" href="/Participants"
+                            target="_blank">
+                            <img name='report7' id='report7' data-mnm-selector="report7"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section8" id='section8' data-mnm-selector="section8">
+                    <td class="ScheduleVenue" id='ScheduleVenue' name='ScheduleVenue' data-mnm-selector="ScheduleVenue"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Schedule Venue</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn8'
+                            id='btn8' data-mnm-selector="btn8"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn8") ;  readfile("btn8","status8","report8","reportlink8","Event-Manage-Schedule-Venue","ScheduleVenue")'
+                            type="button">Start</button></td>
+                    <td><img name='status8' id='status8' data-mnm-selector="status8"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink8' id='reportlink8' data-mnm-selector="reportlink8" href="/ScheduleVenue"
+                            target="_blank">
+                            <img name='report8' id='report8' data-mnm-selector="report8"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr class="section9" id='section9' data-mnm-selector="section9">
+                    <td class="Ticket" id='Ticket' name='Ticket' data-mnm-selector="Ticket"
+                        style="font-size: 29px;opacity: 1;filter: blur(0px);">Ticket</td>
+                    <td class="text-left d-xl-flex align-items-xl-center"><button class="btn btn-primary" name='btn9'
+                            id='btn9' data-mnm-selector="btn9"
+                            style="display: block; margin-left: auto; margin-right: auto;"
+                            onClick='hidesection("btn9") ;  readfile("btn9","status9","report9","reportlink9","Event-Manage-Ticket","Ticket")'
+                            type="button">Start</button></td>
+                    <td><img name='status9' id='status9' data-mnm-selector="status9"
+                            style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                            src="assets/img/yoga-posture.svg"></td>
+                    <td>
+                        <a name='reportlink9' id='reportlink9' data-mnm-selector="reportlink9" href="/Ticket"
+                            target="_blank">
+                            <img name='report9' id='report9' data-mnm-selector="report9"
+                                style="display: block; margin-left: auto; margin-right: auto; width: 50px;height: 50px;"
+                                src="assets/img/shield.svg">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="timer"> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td style="font-size: 29px;opacity: 1;filter: blur(0px);"> MERT ÇALIŞKAN </td>
+                </tr>
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+    <div></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+    <script src="assets/js/myscript.js"></script>
+
+
+</body>
+
+</html>
