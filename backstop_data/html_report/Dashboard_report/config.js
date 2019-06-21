@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../AllTest/ReferenceDesktop/Test_Dashboard_Page_0_document_0_Desktop.png",
-        "test": "../AllTest/TestDesktop/20190611-165842/Test_Dashboard_Page_0_document_0_Desktop.png",
+        "test": "../AllTest/TestDesktop/20190621-193018/Test_Dashboard_Page_0_document_0_Desktop.png",
         "selector": "document",
         "fileName": "Test_Dashboard_Page_0_document_0_Desktop.png",
         "label": "Dashboard Page",
@@ -19,10 +19,10 @@ report({
             "width": 0,
             "height": 0
           },
-          "misMatchPercentage": "0.15",
-          "analysisTime": 105
+          "misMatchPercentage": "0.01",
+          "analysisTime": 79
         },
-        "diffImage": "../AllTest/TestDesktop/20190611-165842/failed_diff_Test_Dashboard_Page_0_document_0_Desktop.png"
+        "diffImage": "../AllTest/TestDesktop/20190621-193018/failed_diff_Test_Dashboard_Page_0_document_0_Desktop.png"
       },
       "status": "fail"
     }

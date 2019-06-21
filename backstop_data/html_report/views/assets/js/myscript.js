@@ -1,6 +1,4 @@
 
-
-
 function readfile(buttonId, statusId, reportId, link, type, reportUrl) {
 
     document.getElementById(statusId).src = 'assets/img/running.svg';
@@ -22,60 +20,74 @@ function readfile(buttonId, statusId, reportId, link, type, reportUrl) {
     });
 
 }
+
 function hidesection(buttonId) {
     document.getElementById(buttonId).style.visibility = 'hidden';
 }
 
+setInterval(control, 3000);
 
-setInterval(control, 1000);
-var a = 0;
-var reportUrl;
-var type;
+var first = setInterval(control, 100);
 
 function control() {
-
-    b = a % 9 + 1
-    a++;
-
-    switch (b) {
-        case 1:
-            reportUrl = "Award";
-            type = "Event-Manage-Awards";
-            break;
-        case 2:
-            reportUrl = "Bracket";
-            type = "Event-Manage-Bracket";
-            break;
-        case 3:
-            reportUrl = "Dashboard";
-            type = "Event-Manage-Dashboard";
-            break;
-        case 4:
-            reportUrl = "Design";
-            type = "Event-Manage-Design";
-            break;
-        case 5:
-            reportUrl = "EventProfile";
-            type = "Event-Manage-Event-Profile";
-            break;
-        case 6:
-            reportUrl = "MatchResult";
-            type = "Event-Manage-Match-Result";
-            break;
-        case 7:
-            reportUrl = "Participants";
-            type = "Event-Manage-Participants";
-            break;
-        case 8:
-            reportUrl = "ScheduleVenue";
-            type = "Event-Manage-Schedule-Venue";
-            break;
-        case 9:
-            reportUrl = "Ticket";
-            type = "Event-Manage-Ticket";
-            break;
+    for (b = 0; b < 9; b++) {
+        switch (b) {
+            case 0:
+                reportUrl = "Award";
+                type = "Event-Manage-Awards";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 1:
+                reportUrl = "Bracket";
+                type = "Event-Manage-Bracket";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 2:
+                reportUrl = "Dashboard";
+                type = "Event-Manage-Dashboard";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 3:
+                reportUrl = "Design";
+                type = "Event-Manage-Design";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 4:
+                reportUrl = "EventProfile";
+                type = "Event-Manage-Event-Profile";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 5:
+                reportUrl = "MatchResult";
+                type = "Event-Manage-Match-Result";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 6:
+                reportUrl = "Participants";
+                type = "Event-Manage-Participants";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 7:
+                reportUrl = "ScheduleVenue";
+                type = "Event-Manage-Schedule-Venue";
+                datastatus(b+1,reportUrl,type);
+                break;
+            case 8:
+                reportUrl = "Ticket";
+                type = "Event-Manage-Ticket";
+                datastatus(b+1,reportUrl,type);
+                break;
+        }
     }
 
+    
+
+    jQuery.get('Approve.txt', function (data) {
+        document.getElementById("approveBtn").innerText = data;
+    }, 'text');
+}
+
+function datastatus(b,reportUrl,type) {
     jQuery.get(type + '.txt', function (data) {
 
         if (data == "Finished") {
@@ -87,12 +99,12 @@ function control() {
         if (data == "Running") {
             document.getElementById("status" + b).src = 'assets/img/running.svg';
             document.getElementById("report" + b).src = 'assets/img/loading-mark.svg';
-            document.getElementById("btn"+b).style.visibility = 'hidden';
+            document.getElementById("btn" + b).style.visibility = 'hidden';
             document.getElementById("reportlink" + b).href = "/Error";
         }
     }, 'text');
+    clearInterval(first);
 }
-
 
 setInterval(zamanGoster, 1000);
 
@@ -135,5 +147,24 @@ function searchFunction() {
     if ("TICKET".startsWith(filter)) {
         $('.section9').show();
     }
+}
+
+function approveBtn() {
+    jQuery.get('Approve.txt', function (data) {
+
+        $.ajax({
+            url: '/Approve?testtype=' + data,
+            type: 'POST',
+            datatype: "json",
+            error: function (result) {
+                console.log("ERROR" + result.status)
+            },
+            success: function (result) {
+                if (result.status == 200) {
+                    console.log("OK" + result.status)
+                }
+            },
+        });
+    }, 'text');
 }
 

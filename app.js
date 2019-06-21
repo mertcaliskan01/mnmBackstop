@@ -24,6 +24,10 @@ app.post('/Desktop', function (req, res) {
             if (err) console.log(err);
             console.log("Successfully Written to File.");
         });
+        fs.writeFile("backstop_data/html_report/views/Approve.txt", req.query.testtype, (err) => {
+            if (err) console.log(err);
+            console.log("Successfully Written to Approve File.");
+        });
         console.log('executed test');
     });
     var data = "Running";
@@ -33,6 +37,16 @@ app.post('/Desktop', function (req, res) {
 	res.json({ success: "Updated Successfully", status: 200 });
     });
     
+});
+
+app.post('/Approve', function (req, res) {
+    shell.exec('backstop approve --config=TestPC/' + req.query.testtype, function (err) {
+        var data = req.query.testtype;
+        fs.writeFile("backstop_data/html_report/views/approve.txt", data, (err) => {
+            if (err) console.log(err);
+            console.log("Successfully Written to File.");
+        });
+    });    
 });
 
 //#region PC
